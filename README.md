@@ -1,5 +1,9 @@
 # Component Library++ ⚡
 
+[![Demo](https://github.com/user-attachments/assets/42b12d3e-af32-4915-8f35-f644ae485646)](https://celadon-speculoos-d1f956.netlify.app/)
+
+> Click the image to view the demo. The link will open in the current tab (press `Ctrl + Click` or `Cmd + Click` to open in a new tab).
+
 ## Description
 
 **Component Library++** is a collection of reusable React components built with Vite. Each component is displayed with a live preview and a JSX code tab — click any component to copy its ready-to-use code snippet directly to your clipboard.
