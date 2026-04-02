@@ -1,0 +1,202 @@
+/* =========================================================
+   TESTIMONIAL — with photo and no-photo variants
+   Breakpoint matches the useMediaQuery(850px) in component
+   ========================================================= */
+
+/* ── With Photo ── */
+.t-with-photo {
+  position: relative;
+  max-width: 100%;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  cursor: pointer;
+}
+
+.t-with-photo__img-wrap {
+  width: 384px;
+  height: 464px;
+  overflow: hidden;
+  border-radius: 12px;
+  position: absolute;
+  top: 64px;
+  left: 16px;
+  z-index: 2;
+}
+
+.t-with-photo__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.t-with-photo__img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #c7d2fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #3730a3;
+  text-align: center;
+  padding: 16px;
+}
+
+.t-with-photo__content {
+  background: #2545B8;
+  padding: 80px 71px 80px 487px;
+  position: relative;
+  z-index: 1;
+}
+
+.t-with-photo__quotes {
+  margin-bottom: 24px;
+}
+
+.t-with-photo__quote {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.t-with-photo__name {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.t-with-photo__role {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 0;
+  opacity: 0.85;
+}
+
+/* ── No Photo ── */
+.t-no-photo {
+  background: #ffffff;
+  position: relative;
+  max-width: 100%;
+  padding: 96px 22% 112px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.t-no-photo__logo {
+  margin-bottom: 24px;
+  max-height: 40px;
+  z-index: 2;
+}
+
+.t-no-photo__quote {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 500;
+  color: #111827;
+  margin: 40px 0 32px;
+  z-index: 2;
+  position: relative;
+}
+
+.t-no-photo__author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  z-index: 2;
+  position: relative;
+}
+
+.t-no-photo__name {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #111827;
+  margin: 0;
+}
+
+.t-no-photo__divider {
+  margin: 0 10px;
+}
+
+.t-no-photo__role {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #6b7280;
+  margin: 0;
+}
+
+.t-no-photo__dots {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ── Mobile (≤ 850px) — both variants stack vertically ── */
+@media (max-width: 850px) {
+  .t-with-photo {
+    padding-top: 96px;
+    padding-bottom: 0;
+    max-width: 376px;
+    margin: 0 auto;
+  }
+
+  .t-with-photo__img-wrap {
+    width: 100%;
+    height: 206px;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 12px;
+  }
+
+  .t-with-photo__content {
+    padding: 151px 16px 64px;
+  }
+
+  .t-no-photo {
+    padding: 74px 16px;
+    text-align: start;
+    align-items: flex-start;
+    max-width: 376px;
+    margin: 0 auto;
+  }
+
+  .t-no-photo__author {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .t-no-photo__divider {
+    display: none;
+  }
+}
+
+/* ── Tablet (768px–1024px) stack vertically ── */
+@media (max-width: 1024px) and (min-width: 851px) {
+  .t-with-photo__content {
+    padding-left: 420px;
+  }
+}

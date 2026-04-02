@@ -1,0 +1,100 @@
+/* =========================================================
+   DESIGN TOKENS — light mode defaults
+   ========================================================= */
+:root {
+  --font-display: "Syne", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Font sizes */
+  --fs-xs:   0.75rem;
+  --fs-sm:   0.875rem;
+  --fs-base: 1rem;
+  --fs-lg:   1.125rem;
+  --fs-xl:   1.25rem;
+  --fs-2xl:  1.5rem;
+  --fs-3xl:  1.875rem;
+  --fs-4xl:  2.25rem;
+
+  /* Colors */
+  --bg:          #f9f9f8;
+  --bg-surface:  #ffffff;
+  --bg-hover:    #f3f3f2;
+  --text-primary:   #111111;
+  --text-secondary: #555555;
+  --text-muted:     #999999;
+  --border:      #e4e4e4;
+  --border-strong: #c8c8c8;
+
+  --accent:      #2563eb;
+  --accent-soft: #eff6ff;
+
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.11);
+
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-pill: 9999px;
+
+  /* Badge colors */
+  --badge-pink-bg:   #fce7f3; --badge-pink-text:   #9d174d;
+  --badge-purple-bg: #ede9fe; --badge-purple-text: #5b21b6;
+  --badge-indigo-bg: #e0e7ff; --badge-indigo-text: #3730a3;
+  --badge-blue-bg:   #dbeafe; --badge-blue-text:   #1e40af;
+  --badge-green-bg:  #d1fae5; --badge-green-text:  #065f46;
+  --badge-yellow-bg: #fef3c7; --badge-yellow-text: #92400e;
+  --badge-red-bg:    #fee2e2; --badge-red-text:    #991b1b;
+  --badge-gray-bg:   #f3f4f6; --badge-gray-text:   #374151;
+
+  /* Banner status */
+  --success-bg: #ecfdf5; --success-text: #065f46; --success-icon: #34d399;
+  --warning-bg: #fffbeb; --warning-text: #92400e; --warning-icon: #fbbf24;
+  --error-bg:   #fef2f2; --error-text:   #991b1b; --error-icon:   #f87171;
+  --neutral-bg: #eff6ff; --neutral-text: #1e40af; --neutral-icon: #60a5fa;
+}
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+[data-theme="dark"] {
+  --bg:          #111111;
+  --bg-surface:  #1c1c1c;
+  --bg-hover:    #242424;
+  --text-primary:   #f0f0f0;
+  --text-secondary: #aaaaaa;
+  --text-muted:     #666666;
+  --border:      #2e2e2e;
+  --border-strong: #444444;
+  --accent:      #60a5fa;
+  --accent-soft: #1e3a5f;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.45);
+
+  --badge-pink-bg:   #3b0f2a; --badge-pink-text:   #f9a8d4;
+  --badge-purple-bg: #2e1a5c; --badge-purple-text: #c4b5fd;
+  --badge-indigo-bg: #1e1b4b; --badge-indigo-text: #a5b4fc;
+  --badge-blue-bg:   #172554; --badge-blue-text:   #93c5fd;
+  --badge-green-bg:  #022c22; --badge-green-text:  #6ee7b7;
+  --badge-yellow-bg: #2d1e02; --badge-yellow-text: #fcd34d;
+  --badge-red-bg:    #2d0a0a; --badge-red-text:    #fca5a5;
+  --badge-gray-bg:   #1f2937; --badge-gray-text:   #d1d5db;
+
+  --success-bg: #052e16; --success-text: #86efac;
+  --warning-bg: #2d1e02; --warning-text: #fcd34d;
+  --error-bg:   #2d0a0a; --error-text:   #fca5a5;
+  --neutral-bg: #172554; --neutral-text: #93c5fd;
+}
+
+/* =========================================================
+   RESPONSIVE FONT SIZES
+   ========================================================= */
+@media (max-width: 1024px) {
+  :root { --fs-4xl: 2rem; --fs-3xl: 1.625rem; }
+}
+@media (max-width: 768px) {
+  :root { --fs-4xl: 1.75rem; --fs-3xl: 1.5rem; --fs-2xl: 1.25rem; --fs-xl: 1.125rem; }
+}
+@media (max-width: 480px) {
+  :root { --fs-4xl: 1.5rem; --fs-3xl: 1.25rem; --fs-2xl: 1.125rem; --fs-xl: 1rem; --fs-lg: 1rem; }
+}

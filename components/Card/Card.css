@@ -1,0 +1,74 @@
+/* =========================================================
+   CARD — design from records[] data
+   ========================================================= */
+
+/* Outer wrapper: provides space for icon sticking above */
+.card-outer {
+  padding-top: 28px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
+  width: 336px;
+  padding: 0 24px 32px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  box-shadow: none;
+  transition: box-shadow 0.2s;
+  font-family: "Inter", sans-serif;
+}
+
+.card-outer:hover .card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.09);
+}
+
+/* Icon: absolute, centered, overlapping top edge */
+.card-icon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -26px;
+  width: 72px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #111827;
+  margin-top: 52px;
+  margin-bottom: 20px;
+}
+
+.card-text {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Dark mode */
+[data-theme="dark"] .card {
+  background-color: #1c1c1c;
+  border-color: #2e2e2e;
+}
+
+[data-theme="dark"] .card-title { color: #f0f0f0; }
+[data-theme="dark"] .card-text  { color: #aaaaaa; }
+
+@media (max-width: 480px) {
+  .card { width: 100%; max-width: 336px; }
+  .card-outer { width: 100%; max-width: 336px; }
+}

@@ -1,0 +1,93 @@
+/* =========================================================
+   TOOLTIP — popup card styles (shown as design preview)
+   ========================================================= */
+.tooltip-card {
+  max-width: 320px;
+  width: 320px;
+  border-radius: 8px;
+  padding: 16px;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+}
+
+.tooltip-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.tooltip-card__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* Colored icon box */
+.tooltip-card__icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.tooltip-card__body { flex: 1; min-width: 0; }
+
+.tooltip-card__title {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 0 0 4px;
+}
+
+.tooltip-card__text {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+}
+
+.tooltip-card__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+  padding: 0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Triangle arrow pointing down */
+.tooltip-card__arrow {
+  position: absolute;
+  bottom: -14px;
+  left: 48px;
+}
+
+/* Tooltip section layout */
+.tooltip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+}
+
+.tooltip-group-label {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .tooltip-card { width: 100%; max-width: 100%; }
+}

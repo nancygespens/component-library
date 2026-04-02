@@ -1,0 +1,38 @@
+/* =========================================================
+   BANNER
+   ========================================================= */
+.banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  /* width: 100% — same size for all banners regardless of variant */
+  width: 100%;
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+}
+
+.banner:hover { box-shadow: var(--shadow-hover); }
+.banner--single-line { align-items: center; }
+
+.banner-icon { font-size: 1.125rem; flex-shrink: 0; }
+.banner--single-line .banner-icon { margin-top: 0; }
+
+.banner-title { font-weight: 600; margin: 0; }
+.banner-desc  { font-weight: 400; margin: 0.25rem 0 0; opacity: 0.85; }
+
+.banner--success { background: var(--success-bg); color: var(--success-text); }
+.banner--success .banner-icon { color: var(--success-icon); }
+
+.banner--warning { background: var(--warning-bg); color: var(--warning-text); }
+.banner--warning .banner-icon { color: var(--warning-icon); }
+
+.banner--error   { background: var(--error-bg);   color: var(--error-text); }
+.banner--error   .banner-icon { color: var(--error-icon); }
+
+.banner--neutral { background: var(--neutral-bg); color: var(--neutral-text); }
+.banner--neutral .banner-icon { color: var(--neutral-icon); }

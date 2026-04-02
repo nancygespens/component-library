@@ -1,0 +1,72 @@
+/* =========================================================
+   TOAST — static design preview
+   ========================================================= */
+.toast-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  max-width: 384px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  font-family: "Inter", sans-serif;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+}
+
+.toast-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.12);
+}
+
+.toast-card__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  margin-top: 1px;
+}
+
+.toast-card__body { flex: 1; }
+
+.toast-card__title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 0 0 4px;
+}
+
+.toast-card__text {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+
+/* Close button — visual only in design preview */
+.toast-card__close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  line-height: 1;
+  padding: 0 4px;
+  cursor: pointer;
+  color: #6b7280;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+/* 2×2 grid layout */
+.toast-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 384px));
+  gap: 20px;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .toast-grid {
+    grid-template-columns: 1fr;
+  }
+  .toast-card { max-width: 100%; }
+}
